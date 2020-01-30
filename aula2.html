@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />
+
+        <style>
+            #titulo {
+                color: red;
+            }
+
+            #display{
+                border : 1px solid;
+                width:  200px;
+                padding: 6px;
+                background-color: silver;
+                margin-bottom: 20px;
+                text-align: right;
+                font-family: monospace;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h1 id="titulo">Aula 2</h1>
+        <h1 id= "sub">Subtitulo</h1>  
+           
+
+        <button onclick="cor()"> Clique aqui</button>
+
+        <br> <br>
+
+        <input type = "text" id="texto">
+        <button onclick="altera()"> Altera</button>
+
+        <hr>
+        <h1>Calculadora</h1>
+        <div id="display">
+            090909
+        </div> 
+
+        Valor: 1
+        <input type = "text" id="val1">
+        <br><br>
+
+        Valor: 2
+        <input type = "text" id="val2">
+
+        <br><br>
+        <button>Calcular</button>
+
+        
+        <script>
+            function cor()
+            {
+                var el = document.getElementById("titulo");
+                el.style.color = "blue";
+            }
+            function altera()
+            {
+                var el = document.getElementById("texto");
+                var texto = el.value;
+
+                var sub = document.getElementById("sub");
+                sub.style.color = texto;
+            }
+            function soma()
+            {
+                var valor1 = document.calcform.valor1.value;
+                var valor2 = document.calcform.valor2.value;
+
+                if (oper == "somar") {
+                var res = parseInt(valor1) + parseInt(valor2);
+                    } else {
+                if (oper == "subtrair") {
+                var res = valor1-valor2;
+                     } else {
+                if (oper == "multiplicar") {
+                var res = valor1*valor2;
+                     } else {
+                var res = valor1/valor2;
+         }
+      }
+   }
+
+   document.calcform.res.value = res;
+}
+
+
+               
+        </script>
+        
+ 
+    </body>
+
+
+</html>
