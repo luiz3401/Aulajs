@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>
+           Aula JS 
+        </title>
+        <meta charset="utf-8" />
+
+        <style>
+            label{
+                width: 100px;
+                display: inline-block;
+            }
+
+            table{
+                margin-top: 40px;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th, td{
+                border: 1px solid;
+                padding: 6px;
+            }
+            thead{
+                display: table-header-group;
+                vertical-align: middle;
+                border-color: inherit;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Cadastro de Alunos</h1>
+
+        <fildset>
+
+            <label>Nome</label>
+            <input type="text" id="nome" /> 
+            <br>
+
+            <label>E-mail</label>
+            <input type="text" id="E-mail" />
+            <br>
+
+            <label>Telefone</label>
+            <input type="text" />
+            <br>
+
+            <label>Sexo</label>
+            <input type="radio" name="sexo" value="M"/>Masculino
+            <input type="radio" name="sexo" value="F"/>Feminino
+            <br>
+
+            <label>Período</label>
+            <select>
+                <option value="0">-- Selecione -- </option>
+                <option value="1">Manhã</option>
+                <option value="2">Tarde</option>
+                <option value="3">Noite</option>
+            </select>
+            <br>
+
+            <button onclick="cadastro">Cadastrar</button>
+            
+        </fildset>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Sexo</th>
+                    <th>Período</th>
+                </tr>
+            </thead>
+            <tbody id="alunos">
+                <tr>
+                    <td>Luiz</td>
+                    <td>zimmermanncastro@gmail.com</td>
+                    <td>4135017144</td>
+                    <td>Masculino</td>
+                    <td>Manhã</td>
+                </tr>
+            </tbody>
+        </table>
+
+      
+    </body>    
+</html>
