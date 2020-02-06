@@ -28,6 +28,8 @@
             }
 
         </style>
+        <script src="jquery-3.4.1.js"></script>
+        <script src="alunos.js"></script>  
     </head>
 
     <body>
@@ -40,11 +42,11 @@
             <br>
 
             <label>E-mail</label>
-            <input type="text" id="E-mail" />
+            <input type="text" id="email" />
             <br>
 
             <label>Telefone</label>
-            <input type="text" />
+            <input type="text" id="telefone" />
             <br>
 
             <label>Sexo</label>
@@ -53,7 +55,7 @@
             <br>
 
             <label>Período</label>
-            <select>
+            <select id="periodo">
                 <option value="0">-- Selecione -- </option>
                 <option value="1">Manhã</option>
                 <option value="2">Tarde</option>
@@ -61,7 +63,7 @@
             </select>
             <br>
 
-            <button onclick="cadastro">Cadastrar</button>
+            <button id="btn-cadastrar">Cadastrar</button>
             
         </fildset>
 
