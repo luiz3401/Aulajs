@@ -9,17 +9,23 @@ $(document).ready(function(){
         var periodo = $("#periodo").val();
         var sexo = $("input[name=sexo]:checked").val();
 
+        $("#msg-alert").hide();
+
         if (nome.trim().length < 2)
         {
-            alert("O campo nome é obrigatório");
+            $("#msg-alert").html("O campo nome é obrigatório");
+            $("#msg-alert").fadeIn();
             $("#nome").focus();
+            $("#nome").addClass("erro");
             return false;
         }
 
         if (email == "")
         {
-            alert("O campo email é obrigatório");
+            $("#msg-alert").html("O campo email é obrigatório");
+            $("#msg-alert").fadeIn();
             $("#email").focus();
+            $("#email").addClass("erro");
             return false;
         } else
         {
@@ -27,7 +33,8 @@ $(document).ready(function(){
             var email_regex = /^[0-9a-z\.\_\-]*@[0-9a-z.]*$/gm;
             if (email.search(email_regex) == -1)
             {
-                alert ("O formato do email é inválido");
+                $("#msg-alert").html ("O formato do email é inválido");
+                $("#msg-alert").fadeIn();
                 $("email").focus();
                 return false;
             }
@@ -36,15 +43,18 @@ $(document).ready(function(){
 
         if (telefone == "")
         {
-            alert("O campo telefone é obrigatório");
+            $("#msg-alert").html("O campo telefone é obrigatório");
+            $("#msg-alert").fadeIn();
             $("#telefone").focus();
+            $("#telefone").addClass("erro");
             return false;
         } else {
             
             var fone_regex = /^\([0-9][0-9]\)[0-9]{4,5}-[0-9]{4}$/gm;
             if (telefone.search(fone_regex) == -1)
             {
-                alert("O formato do telefone é inválido");
+                $("#msg-alert").html("O formato do telefone é inválido");
+                $("#msg-alert").fadeIn();
                 $("#telefone").focus();
                 return false;
 
@@ -53,14 +63,18 @@ $(document).ready(function(){
 
         if (sexo == undefined)
         {
-            alert("O campo sexo é obrigatório");
+            $("#msg-alert").html("O campo sexo é obrigatório");
+            $("#msg-alert").fadeIn();
+            $("#sexo").addClass("erro");
             return false;
         }
 
         if (periodo == 0)
         {
-            alert("O campo periodo é obrigatório");
+            $("#msg-alert").html("O campo periodo é obrigatório");
+            $("#msg-alert").fadeIn();
             $("#periodo").focus();
+            $("#periodo").addClass("erro");
             return false;
         }
 
@@ -78,6 +92,22 @@ $(document).ready(function(){
         $("#alunos").append(linha);    
 
     }); //fim do click
+    //$("#telefone").keydown(function(ev){
+    //    console.log(ev);
+
+      //  if (ev.keycode.search(/[0-9()-]/g) != -1 || ev.keycode == 8 || ev.keycode == 9)
+        //{
+          //  return true;
+        //} else {
+
+          //  return false    
+
+  //      }       
+
+    //});
+
+    // mascara para telefone
+    $("#telefone").mask("(00)90000-0000");
 
 }); //fim do ready
 

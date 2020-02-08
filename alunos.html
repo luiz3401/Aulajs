@@ -26,9 +26,21 @@
                 border-color: inherit;
 
             }
+            #msg-alert{
+                color: red;
+                border: 1px solid;
+                padding: 6px;
+                margin: 6px 0;
+                display: none;
+
+            }
+            .erro{
+                color: red;
+            }
 
         </style>
         <script src="jquery-3.4.1.js"></script>
+        <script src="jquery.mask.min.js"></script>
         <script src="alunos.js"></script>  
     </head>
 
@@ -37,16 +49,18 @@
 
         <fildset>
 
+            <div id="msg-alert">Mensagem de Exemplo</div>
+
             <label>Nome</label>
-            <input type="text" id="nome" /> 
+            <input type="text" id="nome" class="erro"/> 
             <br>
 
             <label>E-mail</label>
-            <input type="text" id="email" />
+            <input type="text" id="email" class="erro" />
             <br>
 
             <label>Telefone</label>
-            <input type="text" id="telefone" />
+            <input type="text" id="telefone" class="erro" />
             <br>
 
             <label>Sexo</label>
