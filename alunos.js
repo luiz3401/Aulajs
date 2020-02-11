@@ -26,7 +26,7 @@ $(document).ready(function(){
             $("#msg-alert").fadeIn();
             $("#email").focus();
             $("#email").addClass("erro");
-            return false;
+            var errado = false;
         } else
         {
 
@@ -87,6 +87,7 @@ $(document).ready(function(){
             +"<td>"+ telefone +"</td>";
             +"<td>" + sexo_rotulo + "</td>";
             +"<td>" + vetor_periodo[periodo] +"</td>";
+            +'<td><span class="btn-del">[X]</span></td>';
             +"</tr>";
 
         $("#alunos").append(linha);    
@@ -108,6 +109,15 @@ $(document).ready(function(){
 
     // mascara para telefone
     $("#telefone").mask("(00)90000-0000");
+    //$(".btn-del").click(function(){
+        //console.log(this);
+       // $(this).parent().parent().remove(); 
+
+    });
+    $("#alunos").on("click", ".btn-del", function(){
+
+        $(this).parent().parent().remove();
+    });
 
 }); //fim do ready
 

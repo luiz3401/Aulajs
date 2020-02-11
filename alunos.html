@@ -37,6 +37,13 @@
             .erro{
                 color: red;
             }
+            .btn-del{
+                color: red;
+                cursor: pointer;
+            }
+            .btn-del:hover{
+                border: 1px, solid;
+            }
 
         </style>
         <script src="jquery-3.4.1.js"></script>
@@ -89,6 +96,7 @@
                     <th>Telefone</th>
                     <th>Sexo</th>
                     <th>Período</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody id="alunos">
@@ -98,6 +106,7 @@
                     <td>4135017144</td>
                     <td>Masculino</td>
                     <td>Manhã</td>
+                    <td><span class="btn-del">[X]</span></td>
                 </tr>
             </tbody>
         </table>
