@@ -16,9 +16,7 @@
                 display: inline-block;
             }
         </style>    
-        </head>    
-
-    
+        </head>        
 
     <body>
 
@@ -26,7 +24,17 @@
 
         <h1>Agenda de Contatos</h1>
 
-        <button class="btn btn-success">Carregar</button>
+        <button id="carregar" class="btn btn-success">Carregar</button>
+
+        <fieldset>
+            <label>Nome</label>
+            <input type="text" id="nome" />
+            <br>
+            <label>Email</label>
+            <input type="text" id="email" />
+
+            <button id="enviar">Enviar</button>
+        </fieldset>
 
         <table class="table">
             <thead class="thead-dark">
@@ -38,7 +46,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody id="conteudo">
                 <tr>
                 <td>Optmius Prime</td>
                 <td>optimus@transformers.com</td>
